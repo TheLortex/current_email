@@ -1,0 +1,4 @@
+(library
+ (name current_email)
+ (public_name current_email)
+ (libraries current current.cache sendmail-lwt mrmime emile colombe.emile digestif))
