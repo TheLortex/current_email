@@ -7,8 +7,11 @@
  (synopsis "An OCurrent plugin to send emails")
  (description "Publish emails reporting statuses using colombe")
  (depends
-  current
-  colombe
-  sendmail
+  (current
+   (>= 0.5))
+  (letters
+   (>= 0.3.0))
+  cmdliner
+  yojson
   (ocaml
    (>= 4.13.0))))

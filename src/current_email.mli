@@ -1,17 +1,16 @@
-type ctx
+type ctx = Letters.Config.t
 
-val make :
-  sender:Sendmail.reverse_path ->
-  authentication:Sendmail.authentication ->
-  authenticator:X509.Authenticator.t ->
-  domain:Sendmail.domain ->
-  hostname:'a Domain_name.t ->
-  with_starttls:bool ->
-  ctx
+val cmdliner : ctx Cmdliner.Term.t
+val cmdliner_opt : ctx option Cmdliner.Term.t
+
+type message
+
+val make : string -> Mrmime.Mt.t -> message
 
 val send :
   ctx ->
-  destination:Sendmail.forward_path Current.t ->
+  sender:string Current.t ->
+  recipient:string Current.t ->
   key:string Current.t ->
-  Mrmime.Mt.t Current.t ->
+  message Current.t ->
   unit Current.t
