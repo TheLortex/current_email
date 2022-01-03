@@ -13,5 +13,7 @@
    (>= 0.3.0))
   cmdliner
   yojson
+  digestif
   (ocaml
-   (>= 4.13.0))))
+   (>= 4.13.0))
+  (current_web :with-test)))
