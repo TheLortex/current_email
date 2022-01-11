@@ -47,3 +47,7 @@ The box should be green, and an email should be visible on the [ethereal.email/l
   "port": 587 /* SMTP server port */
 }
 ```
+
+### Acknowledgement
+
+`current_email` has received funding from the Next Generation Internet Initiative (NGI) within the framework of the DAPSI Project
